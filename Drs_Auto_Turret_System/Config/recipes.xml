@@ -1,0 +1,266 @@
+<Drs_Auto_Turret_System>
+	<append xpath="/recipes">
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Calibration_Kit
+			Generic_Turret
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<recipe name="Calibration_Kit" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceForgedSteel" count="5"/>
+	<ingredient name="resourceMechanicalParts" count="1"/>
+	<ingredient name="resourceDuctTape" count="1"/>
+	<ingredient name="resourceScrapPolymers" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="25"/>
+	<ingredient name="resourceMechanicalParts" count="8"/>
+	<ingredient name="resourceDuctTape" count="1"/>
+	<ingredient name="resourceScrapPolymers" count="4"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_Arrow_Stone" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_Arrow_Iron" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_Arrow_Steel" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_Bolt_Stone" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_Bolt_Iron" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_Bolt_Steel" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_Steel_44mag" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_Steel_9mm" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_Steel_762mm" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_44Mag" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_762mm" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_Dart" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_SnowBall" count="1"/>
+</recipe>
+<recipe name="Generic_Turret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="autoTurret_Stone" count="1"/>
+</recipe>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Stone Turret Ammo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+	<recipe name="TurretStone" count="1" craft_area="cementMixer">
+		<ingredient name="resourceRockSmall" count="1"/>
+	</recipe>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<recipe name="autoTurret" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_Arrow_Stone
+			autoTurret_Arrow_Iron
+			autoTurret_Arrow_Steel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<recipe name="autoTurret_Arrow_Stone" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_Arrow_Iron" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_Arrow_Steel" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_Arrow_Stone" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<recipe name="autoTurret_Arrow_Iron" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<recipe name="autoTurret_Arrow_Steel" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_Bolt_Stone
+			autoTurret_Bolt_Iron
+			autoTurret_Bolt_Steel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<recipe name="autoTurret_Bolt_Stone" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_Bolt_Iron" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_Bolt_Steel" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_Bolt_Stone" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<recipe name="autoTurret_Bolt_Iron" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<recipe name="autoTurret_Bolt_Steel" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_Steel_44mag
+			autoTurret_Steel_9mm
+			autoTurret_Steel_762mm			
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<recipe name="autoTurret_Steel_44mag" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_Steel_9mm" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_Steel_762mm" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_Steel_44mag" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<recipe name="autoTurret_Steel_9mm" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<recipe name="autoTurret_Steel_762mm" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_44Mag
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<recipe name="autoTurret_44Mag" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_44Mag" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_762mm
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<recipe name="autoTurret_762mm" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_762mm" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_Dart
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<recipe name="autoTurret_Dart" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_Dart" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_SnowBall
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<recipe name="autoTurret_SnowBall" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_SnowBall" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_Stone
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->	
+<recipe name="autoTurret_Stone" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="motionsensor" count="1"/>
+	<ingredient name="resourceForgedSteel" count="30"/>
+	<ingredient name="resourceMechanicalParts" count="9"/>
+	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="resourceScrapPolymers" count="5"/>
+</recipe>
+<recipe name="autoTurret_Stone" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="Generic_Turret" count="1"/>
+	<ingredient name="Calibration_Kit" count="1"/>
+</recipe>
+
+
+
+</append>
+</Drs_Auto_Turret_System>

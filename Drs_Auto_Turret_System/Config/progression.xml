@@ -1,0 +1,25 @@
+<Drs_Auto_Turret_System>
+<!-- adds in the following
+	autoTurret_Arrow_Stone
+	autoTurret_Arrow_Iron
+	autoTurret_Arrow_Steel
+	autoTurret_Bolt_Stone
+	autoTurret_Bolt_Iron
+	autoTurret_Bolt_Steel
+	autoTurret_Steel_44mag
+	autoTurret_Steel_9mm
+	autoTurret_Steel_762mm
+	autoTurret_44Mag
+	autoTurret_762mm
+	autoTurret_Dart
+	autoTurret_SnowBall
+	autoTurret_Stone
+-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Engineering Progression
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="5"
+			tags="autoTurret_Arrow_Stone,autoTurret_Arrow_Iron,autoTurret_Arrow_Steel,autoTurret_Bolt_Stone,autoTurret_Bolt_Iron,autoTurret_Bolt_Steel,autoTurret_Steel_44mag,autoTurret_Steel_9mm,autoTurret_Steel_762mm,autoTurret_44Mag,autoTurret_762mm,autoTurret_Dart,autoTurret_SnowBall,autoTurret_Stone,Calibration_Kit,Generic_Turret"/>
+	</append>
+</Drs_Auto_Turret_System>

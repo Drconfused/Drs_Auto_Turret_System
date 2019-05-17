@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Drs_Auto_Turret_System" />
+		<Description value="Makes the auto turret capable of being calibrated to take different ammo" />
+		<Author value="Drconfused" />
+		<Version value="0.01" />
+		<Website value="http://7daystodie.com" />
+	</ModInfo>
+</xml>

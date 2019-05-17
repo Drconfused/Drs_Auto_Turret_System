@@ -1,0 +1,51 @@
+<Drs_Auto_Turret_System>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Calibration_Kit
+		Generic_Turret
+		TurretStone
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<append xpath="/items">
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Generic auto Turret no ammo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<item name="Calibration_Kit">
+        <property name="CustomIcon" value="Drs_CalibrationKit"/>
+      	<property name="HoldType" value="45"/>
+      	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+      	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+      	<property name="Material" value="Morganic"/>
+      	<property name="Weight" value="10"/>
+      	<property name="Stacknumber" value="1000"/> 
+		<property name="FuelValue" value="1"/>
+      	<property name="EconomicValue" value="5"/>
+      	<property name="Group" value="Ammo/Weapons,Resources"/>
+</item>
+<item name="Generic_Turret">
+        <property name="CustomIcon" value="Generic_Turret"/>
+      	<property name="HoldType" value="45"/>
+      	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+      	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+      	<property name="Material" value="Morganic"/>
+      	<property name="Weight" value="10"/>
+      	<property name="Stacknumber" value="1000"/> 
+		<property name="FuelValue" value="1"/>
+      	<property name="EconomicValue" value="5"/>
+      	<property name="Group" value="Ammo/Weapons,Resources"/>
+</item>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			 Turret ammo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<item name="TurretStone">
+        <property name="CustomIcon" value="Drs_TurretStone"/> 
+      	<property name="HoldType" value="45"/>
+      	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+      	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+      	<property name="Material" value="Morganic"/>
+      	<property name="Weight" value="10"/>
+      	<property name="Stacknumber" value="1000"/> 
+		<property name="FuelValue" value="1"/>
+      	<property name="EconomicValue" value="5"/>
+      	<property name="Group" value="Ammo/Weapons,Resources"/>
+</item>
+</append>
+</Drs_Auto_Turret_System>

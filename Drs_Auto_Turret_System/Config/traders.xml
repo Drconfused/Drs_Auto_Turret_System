@@ -1,0 +1,39 @@
+<Drs_Auto_Turret_System>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		autoTurret_Arrow_Stone
+		autoTurret_Arrow_Iron
+		autoTurret_Arrow_Steel
+		autoTurret_Bolt_Stone
+		autoTurret_Bolt_Iron
+		autoTurret_Bolt_Steel
+		autoTurret_Steel_44mag
+		autoTurret_Steel_9mm
+		autoTurret_Steel_762mm
+		autoTurret_44Mag
+		autoTurret_762mm
+		autoTurret_Dart
+		autoTurret_SnowBall
+		autoTurret_Stone
+		Generic_Turret
+		Calibration_Kit
+		TurretStone
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='stashOnlyItemsLow']" >
+		<item name="autoTurret_Arrow_Stone" count="1,2" prob="0.5"/>
+		<item name="autoTurret_Arrow_Iron" count="1,2" prob="0.5"/>
+		<item name="autoTurret_Arrow_Steel" count="1,2" prob="0.5"/>
+		<item name="autoTurret_Bolt_Stone" count="1,2" prob="0.5"/>
+		<item name="autoTurret_Bolt_Iron" count="1,2" prob="0.5"/>
+		<item name="autoTurret_Bolt_Steel" count="1,2" prob="0.5"/>
+		<item name="autoTurret_Steel_44mag" count="1,2" prob="0.5"/>
+		<item name="autoTurret_Steel_9mm" count="1,2" prob="0.5"/>
+		<item name="autoTurret_Steel_762mm" count="1,2" prob="0.5"/>
+		<item name="autoTurret_44Mag" count="1,2" prob="0.5"/>
+		<item name="autoTurret_762mm" count="1,2" prob="0.5"/>
+		<item name="autoTurret_Dart" count="1,2" prob="0.5"/>
+		<item name="autoTurret_SnowBall" count="1,2" prob="0.5"/>
+		<item name="Generic_Turret" count="1,2" prob="0.6"/>
+		<item name="Calibration_Kit" count="1,5" prob="0.5"/>
+		<item name="TurretStone" count="100,500" prob="0.7"/>
+	</append>	
+</Drs_Auto_Turret_System>

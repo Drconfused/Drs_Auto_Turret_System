@@ -1,0 +1,970 @@
+<Drs_Auto_Turret_System>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		autoTurret_Arrow_Stone
+		autoTurret_Arrow_Iron
+		autoTurret_Arrow_Steel
+		autoTurret_Bolt_Stone
+		autoTurret_Bolt_Iron
+		autoTurret_Bolt_Steel
+		autoTurret_Steel_44mag
+		autoTurret_Steel_9mm
+		autoTurret_Steel_762mm
+		autoTurret_44Mag
+		autoTurret_762mm
+		autoTurret_Dart
+		autoTurret_SnowBall
+		autoTurret_Stone
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<append xpath="/blocks">
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_Arrow_Stone
+			autoTurret_Arrow_Iron
+			autoTurret_Arrow_Steel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<block name="autoTurret_Arrow_Stone">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_Arrow"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/> <!-- the targeting math will NOT work if it's not upright -->
+	<property name="AmmoItem" value="ammoArrowStone"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/> <!-- 188 dps, 213 dps burst -->
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/> <!-- Spread 2.6deg: 1m cone (55% hit) @ 22m -->
+
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<block name="autoTurret_Arrow_Iron">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_Arrow"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/> <!-- the targeting math will NOT work if it's not upright -->
+	<property name="AmmoItem" value="ammoArrowIron"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/> <!-- 188 dps, 213 dps burst -->
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/> <!-- Spread 2.6deg: 1m cone (55% hit) @ 22m -->
+
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<block name="autoTurret_Arrow_Steel">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_Arrow"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/> <!-- the targeting math will NOT work if it's not upright -->
+	<property name="AmmoItem" value="ammoArrowSteelAP"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/> <!-- 188 dps, 213 dps burst -->
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/> <!-- Spread 2.6deg: 1m cone (55% hit) @ 22m -->
+
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_Bolt_Stone
+			autoTurret_Bolt_Iron
+			autoTurret_Bolt_Steel			
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<block name="autoTurret_Bolt_Stone">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_Bolt"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/> <!-- the targeting math will NOT work if it's not upright -->
+	<property name="AmmoItem" value="ammoCrossbowBoltStone"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/> <!-- 188 dps, 213 dps burst -->
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/> <!-- Spread 2.6deg: 1m cone (55% hit) @ 22m -->
+
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<block name="autoTurret_Bolt_Iron">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_Bolt"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/> <!-- the targeting math will NOT work if it's not upright -->
+	<property name="AmmoItem" value="ammoCrossbowBoltIron"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/> <!-- 188 dps, 213 dps burst -->
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/> <!-- Spread 2.6deg: 1m cone (55% hit) @ 22m -->
+
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<block name="autoTurret_Bolt_Steel">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_Bolt"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/> <!-- the targeting math will NOT work if it's not upright -->
+	<property name="AmmoItem" value="ammoCrossbowBoltSteelAP"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/> <!-- 188 dps, 213 dps burst -->
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/> <!-- Spread 2.6deg: 1m cone (55% hit) @ 22m -->
+
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_Steel_44mag
+			autoTurret_Steel_9mm
+			autoTurret_Steel_762mm
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<block name="autoTurret_Steel_44mag">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_44Mag"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/> <!-- the targeting math will NOT work if it's not upright -->
+	<property name="AmmoItem" value="ammo44MagnumBulletSteel"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/> <!-- 188 dps, 213 dps burst -->
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/> <!-- Spread 2.6deg: 1m cone (55% hit) @ 22m -->
+
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<block name="autoTurret_Steel_9mm">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_Steel_9mm"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/> <!-- the targeting math will NOT work if it's not upright -->
+	<property name="AmmoItem" value="ammo9mmBulletSteel"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/> <!-- 188 dps, 213 dps burst -->
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/> <!-- Spread 2.6deg: 1m cone (55% hit) @ 22m -->
+
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<block name="autoTurret_Steel_762mm">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_762mm"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/> <!-- the targeting math will NOT work if it's not upright -->
+	<property name="AmmoItem" value="ammo762mmBulletFMJSteel"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/> <!-- 188 dps, 213 dps burst -->
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/> <!-- Spread 2.6deg: 1m cone (55% hit) @ 22m -->
+
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_44Mag
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<block name="autoTurret_44Mag">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_44Mag"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/> <!-- the targeting math will NOT work if it's not upright -->
+	<property name="AmmoItem" value="ammo44MagnumBullet"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/> <!-- 188 dps, 213 dps burst -->
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/> <!-- Spread 2.6deg: 1m cone (55% hit) @ 22m -->
+
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_762mm
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<block name="autoTurret_762mm">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_762mm"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/> <!-- the targeting math will NOT work if it's not upright -->
+	<property name="AmmoItem" value="ammo762mmBulletFMJ"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/> <!-- 188 dps, 213 dps burst -->
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/> <!-- Spread 2.6deg: 1m cone (55% hit) @ 22m -->
+
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<!-- <property class="UpgradeBlock">
+		<property name="ToBlock" value="autoTurretSteelCased"/>
+		<property name="Item" value="resourceForgedSteel"/>
+		<property name="ItemCount" value="10"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>-->
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			ammoDartSteel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<block name="autoTurret_Dart">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_Dart"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/> <!-- the targeting math will NOT work if it's not upright -->
+	<property name="AmmoItem" value="ammoDartSteel"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="32"/> <!-- 188 dps, 213 dps burst -->
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/> <!-- Spread 2.6deg: 1m cone (55% hit) @ 22m -->
+
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<!-- <property class="UpgradeBlock">
+		<property name="ToBlock" value="autoTurretSteelCased"/>
+		<property name="Item" value="resourceForgedSteel"/>
+		<property name="ItemCount" value="10"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>-->
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_SnowBall
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<block name="autoTurret_SnowBall">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_SnowBall"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/> <!-- the targeting math will NOT work if it's not upright -->
+	<property name="AmmoItem" value="resourceSnowBall"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="2"/>
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/> <!-- Spread 2.6deg: 1m cone (55% hit) @ 22m -->
+
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+
+	<property name="DamageBonus.head" value="1"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="0.2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<!-- <property class="UpgradeBlock">
+		<property name="ToBlock" value="autoTurretSteelCased"/>
+		<property name="Item" value="resourceForgedSteel"/>
+		<property name="ItemCount" value="10"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>-->
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			autoTurret_Stone
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->	
+<block name="autoTurret_Stone">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Ranged"/>
+	<property name="DisplayType" value="blockElectricalHardened" />
+	<property name="CustomIcon" value="autoTurret_Stone"/>
+	<property name="Material" value="Mmetal_medium"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/> <!-- the targeting math will NOT work if it's not upright -->
+	<property name="AmmoItem" value="TurretStone"/>
+	<property name="TurnSpeed" value="22.5"/>
+	<property name="MaxDistance" value="30"/>
+	<property name="EntityDamage" value="10"/>
+	<property name="BlockDamage" value="1"/>
+	<property name="RaySpread" value="2.6"/> <!-- Spread 2.6deg: 1m cone (55% hit) @ 22m -->
+
+	<property name="BustRoundCount" value="15"/>
+	<property name="BurstFireRate" value="0.15"/>
+	<property name="CooldownTime" value="2"/>
+	<property name="OvershootTime" value="0.4"/>
+	<property name="FallAsleepTime" value="10"/>
+	<property name="WakeUpTime" value="0.5"/>
+
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+
+	<property name="ParticlesMuzzleFire" value="nozzleflashuzi"/>
+	<property name="ParticlesMuzzleSmoke" value="nozzlesmokeuzi"/>
+
+	<property name="DamageBonus.head" value="3"/>
+	<property name="DamageBonus.glass" value="1"/>
+	<property name="DamageBonus.wood" value="2"/>
+	<property name="DamageBonus.earth" value="0.2"/>
+	<property name="DamageBonus.stone" value="0.2"/>
+	<property name="DamageBonus.metal" value="0.2"/>
+
+	<property name="TargetingSound" value="turret_retarget_lp"/>
+	<property name="OverheatSound" value="turret_overheat_lp"/>
+	<property name="WakeUpSound" value="turret_windup"/>
+	<property name="FireSound" value="Pistol_Fire"/>
+	<property name="RequiredPower" value="15"/>
+
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="12"/>
+		<property name="resourceMechanicalParts" value="2"/>
+		<property name="resourceElectricParts" value="2"/>
+	</property>
+	<!-- <property class="UpgradeBlock">
+		<property name="ToBlock" value="autoTurretSteelCased"/>
+		<property name="Item" value="resourceForgedSteel"/>
+		<property name="ItemCount" value="10"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>-->
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+
+	<property name="Stacknumber" value="10"/>
+	<property name="EconomicValue" value="3000"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="109"/>
+	<property name="Group" value="Tools/Traps,Science"/>
+	<property name="PickupJournalEntry" value="cameraTip"/>
+	<property name="FilterTags" value="fdecor,felectrical,ftraps"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+</append>
+</Drs_Auto_Turret_System>
